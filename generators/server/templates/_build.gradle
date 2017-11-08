@@ -369,7 +369,7 @@ dependencies {
     compile "com.google.guava:guava"
     <%_ } _%>
     <%_ if (databaseType === 'couchbase') { _%>
-        compile "com.github.differentway:couchmove:couchmove"
+    compile "com.github.differentway:couchmove"
     <%_ } _%>
     compile ("io.springfox:springfox-swagger2") {
         exclude module: 'mapstruct'
@@ -424,7 +424,7 @@ dependencies {
     testCompile "de.flapdoodle.embed:de.flapdoodle.embed.mongo"
     <%_ } _%>
     <%_ if (databaseType === 'couchbase') { _%>
-    testCompile "com.github.differentway:couchbase-testcontainer:couchbase-testcontainer"
+    testCompile "com.github.differentway:couchbase-testcontainer"
     <%_ } _%>
     testCompile "org.hamcrest:hamcrest-library"
     <%_ if (devDatabaseType !== 'h2Disk' && devDatabaseType !== 'h2Memory') { _%>
